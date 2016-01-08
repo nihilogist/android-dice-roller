@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/winterNightBlue"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.dave3heaton.rpgdiceroller.SeventhSeaRollerMainActivity"
+    tools:showIn="@layout/activity_seventh_sea_roller_main">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seventh_sea_roller_selection_group_dice_to_roll_scrollable" >
+
+        <RadioGroup
+            android:id="@+id/seventh_sea_roller_selection_group_dice_to_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="@dimen/custom_radio_button_vertical_margin"
+            android:paddingLeft="@dimen/custom_radio_button_horizontal_margin"
+            android:paddingRight="@dimen/custom_radio_button_horizontal_margin"
+            android:paddingTop="@dimen/custom_radio_button_vertical_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/winterNightSnow"
+                android:text="@string/seventh_sea_roller_dice_to_roll"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/winterNightSnow"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_1" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_2" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_3" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:text="4"
+                android:id="@+id/seventh_sea_roller_roll_4" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_5" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_6" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_7" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_8" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_9" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:button="@android:color/transparent"
+                android:background="@drawable/flat_radio_button"
+                android:id="@+id/seventh_sea_roller_roll_10" />
+        </RadioGroup>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/seventh_sea_roller_result_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:text="New Text"
+        android:layout_toRightOf="@+id/seventh_sea_roller_selection_group_dice_to_roll_scrollable" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/seventh_sea_roller_selection_group_dice_to_keep_scrollable" >
+
+        <RadioGroup
+            android:id="@+id/seventh_sea_roller_selection_group_dice_to_keep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seventh_sea_roller_dice_to_keep"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/seventh_sea_roller_keep_1" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/seventh_sea_roller_keep_2" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/seventh_sea_roller_keep_3" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/seventh_sea_roller_keep_4" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/seventh_sea_roller_keep_5" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/seventh_sea_roller_keep_6" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/seventh_sea_roller_keep_7" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:id="@+id/seventh_sea_roller_keep_8" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:id="@+id/seventh_sea_roller_keep_9" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:id="@+id/seventh_sea_roller_keep_10" />
+        </RadioGroup>
+    </ScrollView>
+
+</RelativeLayout>
