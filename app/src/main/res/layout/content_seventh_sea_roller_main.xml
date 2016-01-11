@@ -34,75 +34,44 @@
                 android:textColor="@color/winterNightSnow"
                 android:text="@string/seventh_sea_roller_dice_to_roll"/>
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="1"
-                android:textColor="@color/winterNightSnow"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_1" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="2"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_2" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="3"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_3" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="4"
                 android:id="@+id/seventh_sea_roller_roll_4" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="5"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_5" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="6"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_6" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="7"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_7" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="8"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_8" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="9"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_9" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/seventhSeaDieSelectButton"
                 android:text="10"
-                android:button="@android:color/transparent"
-                android:background="@drawable/flat_radio_button"
                 android:id="@+id/seventh_sea_roller_roll_10" />
         </RadioGroup>
     </ScrollView>
