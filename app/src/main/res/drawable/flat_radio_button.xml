@@ -2,12 +2,10 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/flat_radio_button_selected"
-        android:state_checked="true"
-        android:state_pressed="true" />
-    <item
-        android:drawable="@drawable/flat_radio_button_unselected"
         android:state_checked="true" />
     <item
         android:drawable="@drawable/flat_radio_button_unselected"
-        android:state_pressed="true" />
+        android:state_checked="false"
+        android:state_pressed="false"
+         />
 </selector>
