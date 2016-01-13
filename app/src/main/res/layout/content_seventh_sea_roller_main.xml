@@ -51,6 +51,26 @@
                     style="@style/seventhSeaDieSelectButton"
                     android:text="5"
                     android:id="@+id/seventh_sea_roller_roll_5" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="6"
+                    android:id="@+id/seventh_sea_roller_roll_6" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="7"
+                    android:id="@+id/seventh_sea_roller_roll_7" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="8"
+                    android:id="@+id/seventh_sea_roller_roll_8" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="9"
+                    android:id="@+id/seventh_sea_roller_roll_9" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="10"
+                    android:id="@+id/seventh_sea_roller_roll_10" />
             </RadioGroup>
         </ScrollView>
     </RelativeLayout>
@@ -90,6 +110,26 @@
                     style="@style/seventhSeaDieSelectButton"
                     android:text="5"
                     android:id="@+id/seventh_sea_roller_keep_5" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="6"
+                    android:id="@+id/seventh_sea_roller_keep_6" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="7"
+                    android:id="@+id/seventh_sea_roller_keep_7" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="8"
+                    android:id="@+id/seventh_sea_roller_keep_8" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="9"
+                    android:id="@+id/seventh_sea_roller_keep_9" />
+                <RadioButton
+                    style="@style/seventhSeaDieSelectButton"
+                    android:text="10"
+                    android:id="@+id/seventh_sea_roller_keep_10" />
             </RadioGroup>
         </ScrollView>
     </RelativeLayout>
