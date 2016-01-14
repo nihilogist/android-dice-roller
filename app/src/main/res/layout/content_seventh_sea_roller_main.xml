@@ -139,19 +139,49 @@
         android:id="@+id/seventh_sea_roller_results_column"
         android:layout_toRightOf="@id/seventh_sea_roller_dice_to_keep_column">
 
-        <TextView
-            style="@style/text_header_style"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/seventh_sea_roller_result_field"
-            android:text="New Text"/>
+            android:layout_alignParentTop="true"
+            android:id="@+id/seventh_sea_roller_results_panel">
+
+            <TextView
+                style="@style/text_header_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seventh_sea_roller_result_field"
+                android:text="Results"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seventh_sea_roller_result_field"
+                android:id="@+id/seventh_sea_roller_result_text"
+                android:text="Results"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seventh_sea_roller_control_panel"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seventh_sea_roller_button_roll"
+                android:text="Roll"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/seventh_sea_roller_button_add_drama"
+                android:text="Drama Die"/>
+
+        </RelativeLayout>
+
+
 
     </RelativeLayout>
-
-
-
-
-
-
 
 </RelativeLayout>
