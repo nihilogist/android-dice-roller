@@ -30,8 +30,8 @@
         <item name="android:textColor">@color/radio_button_text</item>
         <item name="android:button">@android:color/transparent</item>
         <item name="android:background">@drawable/flat_radio_button</item>
-        <item name="android:layout_width">@dimen/seventh_sea_roller_dice_radiobutton_width</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/seventh_sea_roller_dice_select_button_height</item>
     </style>
 
     <style name="seventh_sea_layout_column_style">
@@ -49,7 +49,7 @@
 
     <style name="seventh_sea_die_selector_radiogroup">
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
