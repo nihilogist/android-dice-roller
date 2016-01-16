@@ -3,11 +3,16 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
     <dimen name="custom_radio_button_vertical_margin">5dp</dimen>
     <dimen name="custom_radio_button_horizontal_margin">5dp</dimen>
+    <dimen name="custom_radio_button_external_margin">3dp</dimen>
+    <dimen name="custom_radio_button_unselected_elevation">1dp</dimen>
+    <dimen name="custom_radio_button_selected_elevation">4dp</dimen>
+
     <dimen name="text_header_text_size">16dp</dimen>
     <dimen name="text_header_space_below">3dp</dimen>
-    <dimen name="seventh_sea_roller_dice_scrollview_width">80dp</dimen>
+    <dimen name="seventh_sea_roller_dice_scrollview_width">90dp</dimen>
     <dimen name="seventh_sea_roller_dice_select_button_height">30dp</dimen>
     <dimen name="seventh_sea_die_button_text_size">14dp</dimen>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="#badaee" />
+    <solid android:color="@color/materialThemeLightWhite" />
     <padding android:bottom="@dimen/custom_radio_button_vertical_margin" android:top="@dimen/custom_radio_button_vertical_margin" android:left="@dimen/custom_radio_button_horizontal_margin" android:right="@dimen/custom_radio_button_horizontal_margin" ></padding>
 </shape>

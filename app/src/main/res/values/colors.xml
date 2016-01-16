@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="winterNightBlue">#435f6f</color>
     <color name="winterNightSnow">#dddddd</color>
+    <!-- -->
+    <color name="materialThemeLightWhite">#eaeaea</color>
+    <color name="materialThemeLightGrey">#bfbfbf</color>
+    <color name="materialThemeTextColour">#383838</color>
 </resources>

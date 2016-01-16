@@ -11,7 +11,7 @@
         <activity
             android:name=".RpgDiceRollerMain"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,8 @@
             android:name=".SeventhSeaRollerMainActivity"
             android:label="@string/title_activity_seventh_sea_roller_main"
             android:parentActivityName=".RpgDiceRollerMain"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.dave3heaton.rpgdiceroller.RpgDiceRollerMain" />
