@@ -25,7 +25,7 @@
         </set>
     </item>
     <!-- base state -->
-    <item android:state_enabled="true">
+    <item>
         <set>
             <objectAnimator android:propertyName="translationZ"
                 android:duration="@integer/custom_radio_button_pressed_animation_duration"
