@@ -28,8 +28,8 @@
     <style name="seventhSeaDieSelectButton">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/materialThemeTextColour</item>
-        <item name="android:button">@android:color/transparent</item>
-        <item name="android:background">@drawable/flat_radio_button</item>
+        <!--<item name="android:button">@android:color/transparent</item>-->
+        <!--<item name="android:background">@drawable/flat_radio_button</item>-->
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/seventh_sea_roller_dice_select_button_height
         </item>
