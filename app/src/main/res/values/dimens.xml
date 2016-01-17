@@ -15,4 +15,6 @@
     <dimen name="seventh_sea_roller_dice_scrollview_width">90dp</dimen>
     <dimen name="seventh_sea_roller_dice_select_button_height">30dp</dimen>
     <dimen name="seventh_sea_die_button_text_size">14dp</dimen>
+    <dimen name="seventh_sea_roll_result_card_padding">5dp</dimen>
+    <dimen name="seventh_sea_roll_result_card_elevation">4dp</dimen>
 </resources>
