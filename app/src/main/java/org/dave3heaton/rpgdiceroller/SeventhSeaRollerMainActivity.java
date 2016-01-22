@@ -4,8 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaRoll;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +19,7 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
 
     private RadioGroup rollGroup;
     private RadioGroup keepGroup;
+    private Button makeRollButton;
 
     private static final String LOG_CATEGORY = "SeventhSeaRoller";
 
@@ -45,6 +50,15 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
             }
         });
 
+        // Initialise the listeners on the 'Roll' button
+        makeRollButton = (Button)findViewById(R.id.seventh_sea_roller_button_roll);
+        makeRollButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                makeRollButtonPressed();
+            }
+        });
+
     }
 
     private void updateRollGroup(int checkedButtonId) {
@@ -52,6 +66,7 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         Log.d(LOG_CATEGORY, "Roll group, button " + getDiceToRoll() + " pressed.");
 
         setMaximumKeepValue(getDiceToRoll());
+        updateRollTitle();
     }
 
     private int getDiceToRoll() {
@@ -75,13 +90,10 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
     }
 
     private void setMaximumKeepValue(int maximumKeepValue) {
-        Log.d(LOG_CATEGORY, "Setting maximum keep value to " + maximumKeepValue);
         boolean resetDiceToKeep = getDiceToKeep() > maximumKeepValue;
-
         List<RadioButton> buttonList = getRadioButtonListFromGroup(keepGroup);
 
         if(resetDiceToKeep) {
-            Log.i(LOG_CATEGORY, "Dice to keep exceeds dice to roll, resetting.");
             keepGroup.clearCheck();
             for (RadioButton button : buttonList) {
                 if (getValueFromButtonId(button.getId()) > maximumKeepValue) {
@@ -91,26 +103,18 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
             }
         }
 
-
-
         for (RadioButton button : buttonList) {
             // Disable all buttons for values higher than the maximum keep value, enable all others.
             if (getValueFromButtonId(button.getId()) > maximumKeepValue) {
-                Log.d(LOG_CATEGORY, "Disabling button " + getValueFromButtonId(button.getId()));
                 button.setEnabled(false);
             } else {
-                Log.d(LOG_CATEGORY, "Enabling button " + getValueFromButtonId(button.getId()));
 
                 button.setEnabled(true);
             }
 
             if (resetDiceToKeep && getValueFromButtonId(button.getId()) == maximumKeepValue) {
-                Log.d(LOG_CATEGORY, "Checking new keep value.");
                 button.setChecked(true);
             }
-
-
-
         }
         Log.d(LOG_CATEGORY, "New keep value is " + getDiceToKeep());
     }
@@ -126,5 +130,21 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         return buttonList;
     }
 
+    private void makeRollButtonPressed() {
+        SeventhSeaRoll roller = new SeventhSeaRoll(getDiceToRoll(), getDiceToKeep(), true);
+        roller.roll();
+        String result = "Result: " + roller.getFacingNumber();
+        TextView resultText = (TextView)findViewById(R.id.seventh_sea_roll_result_text);
+        resultText.setText(result);
+    }
+
+    private String getRollDescription() {
+        return getDiceToRoll() + "k" + getDiceToKeep();
+    }
+
+    private void updateRollTitle() {
+        TextView rollTitle = (TextView)findViewById(R.id.seventh_sea_roll_results_title);
+        rollTitle.setText("Roll: " + getRollDescription());
+    }
 
 }
