@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaDie;
 import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaRoll;
 
 import java.util.ArrayList;
@@ -133,7 +134,14 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
     private void makeRollButtonPressed() {
         SeventhSeaRoll roller = new SeventhSeaRoll(getDiceToRoll(), getDiceToKeep(), true);
         roller.roll();
-        String result = "Result: " + roller.getFacingNumber();
+        String result = "Result: " + roller.getFacingNumber() + " -- ";
+        for (SeventhSeaDie die : roller.getAllDice()) {
+            if (die.isKept()) {
+                result += "[" + die.getFacingNumber() + "] ";
+            } else {
+                result += "-" + die.getFacingNumber() + "- ";
+            }
+        }
         TextView resultText = (TextView)findViewById(R.id.seventh_sea_roll_result_text);
         resultText.setText(result);
     }
