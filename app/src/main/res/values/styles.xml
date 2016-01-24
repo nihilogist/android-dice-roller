@@ -60,5 +60,9 @@
         <item name="android:textSize">@dimen/seventh_sea_die_button_text_size</item>
     </style>
 
+    <style name="seventh_sea_result_card_roll_detail_text">
+        <item name="android:textSize">30dp</item>
+    </style>
+
 
 </resources>
