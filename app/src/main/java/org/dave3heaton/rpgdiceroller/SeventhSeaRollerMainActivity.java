@@ -58,7 +58,6 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 Log.d(LOG_CATEGORY, "Keep group button press: " + checkedId);
-                updateRollTitle();
             }
         });
 
@@ -72,15 +71,26 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         });
 
         // Initialise the card view
+        Log.d(LOG_CATEGORY, "Creating cardRecyclerView");
         cardRecyclerView = (RecyclerView) findViewById(R.id.seventh_sea_result_recycler_view);
+        Log.d(LOG_CATEGORY, "cardRecyclerView created, creating cardViewLayoutManager");
         cardViewLayoutmanager = new LinearLayoutManager(this);
+        Log.d(LOG_CATEGORY, "cardViewLayoutManager created, assigning cardViewLayoutManager to it");
         cardRecyclerView.setLayoutManager(cardViewLayoutmanager);
+        Log.d(LOG_CATEGORY, "cardViewLayoutManager set.");
 
         // Initialise the list of rolls
         rollsForCardView = new ArrayList<>();
+        Log.d(LOG_CATEGORY, "List of rolls created.");
 
         SeventhSeaCardAdapter cardAdapter = new SeventhSeaCardAdapter(rollsForCardView);
+        Log.d(LOG_CATEGORY, "Card Adapter created.");
         cardRecyclerView.setAdapter(cardAdapter);
+
+        addNewRollCardToRollCardList();
+        addNewRollCardToRollCardList();
+
+        Log.d(LOG_CATEGORY, rollsForCardView.size() + " rolls in card view");
 
         // Initialise the swipe-to-dismiss code
         SwipeableRecyclerViewTouchListener swipeToDismissListener = new SwipeableRecyclerViewTouchListener(cardRecyclerView,
@@ -118,7 +128,6 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
 
     private void updateRollGroup(int checkedButtonId) {
         setMaximumKeepValue(getDiceToRoll());
-        updateRollTitle();
     }
 
     private int getDiceToRoll() {
@@ -183,31 +192,18 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
     }
 
     private void makeRollButtonPressed() {
-        SeventhSeaRoll roller = new SeventhSeaRoll(getDiceToRoll(), getDiceToKeep(), true);
-        roller.roll();
-        String result = "Result: " + roller.getFacingNumber() + " -- ";
-        for (SeventhSeaDie die : roller.getAllDice()) {
-            if (die.isKept()) {
-                result += "[" + die.getFacingNumber() + "] ";
-            } else {
-                result += "-" + die.getFacingNumber() + "- ";
-            }
-        }
-        TextView resultText = (TextView)findViewById(R.id.seventh_sea_roll_result_text);
-        resultText.setText(result);
+        Log.d(LOG_CATEGORY, "Roll button pressed; adding new card.");
 
-        this.rollsForCardView.add(new SeventhSeaRollCard(getDiceToRoll(), getDiceToKeep()));
-
-
+        addNewRollCardToRollCardList();
     }
 
-    private String getRollDescription() {
-        return getDiceToRoll() + "k" + getDiceToKeep();
+    private void addNewRollCardToRollCardList() {
+        SeventhSeaRollCard card = new SeventhSeaRollCard(getDiceToRoll(), getDiceToKeep());
+        card.getSeventhSeaRoll().roll();
+
+        this.rollsForCardView.add(card);
+        this.cardRecyclerView.getAdapter().notifyDataSetChanged();
     }
 
-    private void updateRollTitle() {
-        TextView rollTitle = (TextView)findViewById(R.id.seventh_sea_roll_results_title);
-        rollTitle.setText("Roll: " + getRollDescription());
-    }
 
 }

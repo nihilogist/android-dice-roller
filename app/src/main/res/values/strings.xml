@@ -4,8 +4,8 @@
     <string name="main_menu_seventh_sea">7th Sea rolls</string>
     <string name="title_activity_seventh_sea_roller_main">SeventhSeaRollerMainActivity</string>
     <string name="seventh_sea_roller_main_title">7th Sea roller</string>
-    <string name="seventh_sea_roller_dice_to_roll">Dice to roll</string>
-    <string name="seventh_sea_roller_dice_to_keep">Dice to keep</string>
+    <string name="seventh_sea_roller_dice_to_roll">Rolling</string>
+    <string name="seventh_sea_roller_dice_to_keep">Keeping</string>
     <string name="seventh_sea_roller_results">Results</string>
     <string name="title_activity_main">MainActivity</string>
 </resources>
