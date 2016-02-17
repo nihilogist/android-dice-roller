@@ -88,7 +88,6 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         cardRecyclerView.setAdapter(cardAdapter);
 
         addNewRollCardToRollCardList();
-        addNewRollCardToRollCardList();
 
         Log.d(LOG_CATEGORY, rollsForCardView.size() + " rolls in card view");
 
