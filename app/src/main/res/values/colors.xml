@@ -9,4 +9,8 @@
     <color name="materialThemeLightWhite">#eaeaea</color>
     <color name="materialThemeLightGrey">#bfbfbf</color>
     <color name="materialThemeTextColour">#383838</color>
+    <!-- -->
+    <color name="seventh_sea_dice_lozenge_keep">#8AE3A5</color>
+    <color name="seventh_sea_dice_lozenge_discard">#E0949C</color>
+
 </resources>

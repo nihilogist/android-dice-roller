@@ -1,10 +1,12 @@
 package org.dave3heaton.rpgdiceroller.game.seventhsea;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaDie;
@@ -29,8 +31,8 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
         TextView rollDice;
         TextView keepDice;
         TextView rollResult;
-        TextView rollBreakdown;
         Button rollButton;
+        LinearLayout diceList;
         SeventhSeaRoll seventhSeaRollForCard;
 
         RollCardHolder(View cardView) {
@@ -39,7 +41,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             rollDice = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_roll_dice);
             keepDice = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_keep_dice);
             rollResult = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_roll_score);
-            rollBreakdown = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_roll_breakdown);
+            diceList = (LinearLayout) cardView.findViewById(R.id.seventh_sea_rollcard_dicelist);
         }
 
         public void rollAndUpdateResult() {
@@ -50,15 +52,36 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
         public void updateResult() {
             rollResult.setText(Integer.toString(seventhSeaRollForCard.getFacingNumber()));
-            String breakdown = "";
+
+            // Clear the linear layout
+            diceList.removeAllViews();
+
+            // Add new text layouts for the dice
             for (SeventhSeaDie die : seventhSeaRollForCard.getAllDice()) {
-                if (die.isKept()) {
-                    breakdown += "[" + die.getFacingNumber() + "] ";
+                TextView dieResult = new TextView(this.itemView.getContext());
+                dieResult.setText(die.getFacingNumber() + "");
+
+                // measure the textview and set the width equal to the height
+                dieResult.measure(0,0);
+                dieResult.setWidth(dieResult.getMeasuredHeight());
+
+                // Set a little bit of margin
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                params.setMargins(5,0,0,0);
+                dieResult.setLayoutParams(params);
+
+                // Centre the text
+                dieResult.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+
+                if(die.isKept()) {
+                    dieResult.setBackground(ContextCompat.getDrawable(this.itemView.getContext(), R.drawable.dice_result_background_lozenge_seventh_sea_keep));
                 } else {
-                    breakdown += "|" + die.getFacingNumber() + "| ";
+                    dieResult.setBackground(ContextCompat.getDrawable(this.itemView.getContext(), R.drawable.dice_result_background_lozenge_seventh_sea_discard));
                 }
+
+                diceList.addView(dieResult);
             }
-            rollBreakdown.setText(breakdown);
         }
     }
 
