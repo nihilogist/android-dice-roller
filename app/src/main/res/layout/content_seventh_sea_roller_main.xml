@@ -33,43 +33,43 @@
             <RadioGroup
                 style="@style/seventh_sea_die_selector_radiogroup"
                 android:id="@+id/seventh_sea_roller_roll_group">
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="1"
                     android:id="@+id/seventh_sea_roller_roll_1" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="2"
                     android:id="@+id/seventh_sea_roller_roll_2" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="3"
                     android:id="@+id/seventh_sea_roller_roll_3" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="4"
                     android:id="@+id/seventh_sea_roller_roll_4" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="5"
                     android:id="@+id/seventh_sea_roller_roll_5" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="6"
                     android:id="@+id/seventh_sea_roller_roll_6" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="7"
                     android:id="@+id/seventh_sea_roller_roll_7" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="8"
                     android:id="@+id/seventh_sea_roller_roll_8" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="9"
                     android:id="@+id/seventh_sea_roller_roll_9" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="10"
                     android:id="@+id/seventh_sea_roller_roll_10" />
@@ -94,43 +94,43 @@
             <RadioGroup
                 style="@style/seventh_sea_die_selector_radiogroup"
                 android:id="@+id/seventh_sea_roller_keep_group">
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="1"
                     android:id="@+id/seventh_sea_roller_keep_1" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="2"
                     android:id="@+id/seventh_sea_roller_keep_2" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="3"
                     android:id="@+id/seventh_sea_roller_keep_3" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="4"
                     android:id="@+id/seventh_sea_roller_keep_4" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="5"
                     android:id="@+id/seventh_sea_roller_keep_5" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="6"
                     android:id="@+id/seventh_sea_roller_keep_6" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="7"
                     android:id="@+id/seventh_sea_roller_keep_7" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="8"
                     android:id="@+id/seventh_sea_roller_keep_8" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="9"
                     android:id="@+id/seventh_sea_roller_keep_9" />
-                <RadioButton
+                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="10"
                     android:id="@+id/seventh_sea_roller_keep_10" />
