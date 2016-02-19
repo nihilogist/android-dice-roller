@@ -18,7 +18,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:id="@+id/seventh_sea_roller_dice_to_roll_column">
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.TypefaceTextView
             style="@style/text_header_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         style="@style/seventh_sea_layout_column_style"
         android:id="@+id/seventh_sea_roller_dice_to_keep_column"
         android:layout_toRightOf="@+id/seventh_sea_roller_dice_to_roll_column">
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.TypefaceTextView
             style="@style/text_header_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

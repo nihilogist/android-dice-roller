@@ -17,7 +17,7 @@ import org.dave3heaton.rpgdiceroller.game.seventhsea.SeventhSeaRollCard;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.dave3heaton.rpgdiceroller.utils.LogUtils.debug;
+import static org.dave3heaton.rpgdiceroller.utils.logging.LogUtils.debug;
 
 public class SeventhSeaRollerMainActivity extends AppCompatActivity {
 

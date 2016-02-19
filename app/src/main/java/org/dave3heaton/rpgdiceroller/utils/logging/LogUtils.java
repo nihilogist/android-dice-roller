@@ -1,4 +1,4 @@
-package org.dave3heaton.rpgdiceroller.utils;
+package org.dave3heaton.rpgdiceroller.utils.logging;
 
 import android.util.Log;
 

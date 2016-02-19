@@ -1,7 +1,6 @@
 package org.dave3heaton.rpgdiceroller.game.seventhsea;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import org.dave3heaton.rpgdiceroller.R;
 
 import java.util.List;
 
-import static org.dave3heaton.rpgdiceroller.utils.LogUtils.debug;
+import static org.dave3heaton.rpgdiceroller.utils.logging.LogUtils.debug;
 
 
 public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAdapter.RollCardHolder> {
