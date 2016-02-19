@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RPG Dice Roller</string>
     <string name="action_settings">Settings</string>
-    <string name="main_menu_seventh_sea">7th Sea rolls</string>
+    <string name="main_menu_seventh_sea">7th Sea (1st edition)</string>
     <string name="title_activity_seventh_sea_roller_main">SeventhSeaRollerMainActivity</string>
     <string name="seventh_sea_roller_main_title">7th Sea roller</string>
     <string name="seventh_sea_roller_dice_to_roll">Rolling</string>

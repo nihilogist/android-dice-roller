@@ -8,11 +8,7 @@ android:layout_height="match_parent"
 app:layout_behavior="@string/appbar_scrolling_view_behavior"
 tools:context="org.dave3heaton.rpgdiceroller.RpgDiceRollerMain"
 tools:showIn="@layout/activity_rpg_dice_roller_main">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/app_name" />
-<Button
+<org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceButton
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/main_menu_seventh_sea"
