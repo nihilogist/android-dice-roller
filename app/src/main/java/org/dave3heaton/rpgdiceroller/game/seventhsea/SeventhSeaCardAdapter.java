@@ -54,9 +54,9 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             String breakdown = "";
             for (SeventhSeaDie die : seventhSeaRollForCard.getAllDice()) {
                 if (die.isKept()) {
-                    breakdown += "[" + die.getFacingNumber() + "]";
+                    breakdown += "[" + die.getFacingNumber() + "] ";
                 } else {
-                    breakdown += "|" + die.getFacingNumber() + "|";
+                    breakdown += "|" + die.getFacingNumber() + "| ";
                 }
             }
             rollBreakdown.setText(breakdown);

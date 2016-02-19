@@ -48,9 +48,10 @@
             android:layout_height="wrap_content"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text=""
+            android:text="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "
             android:id="@+id/seventh_sea_rollcard_roll_breakdown"
-            android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_score"/>
+            android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_score"
+            android:layout_toLeftOf="@+id/seventh_sea_rollcard_roll_button"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
