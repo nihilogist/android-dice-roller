@@ -14,6 +14,8 @@ import org.dave3heaton.rpgdiceroller.R;
 
 import java.util.List;
 
+import static org.dave3heaton.rpgdiceroller.utils.LogUtils.debug;
+
 
 public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAdapter.RollCardHolder> {
 
@@ -42,7 +44,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
         }
 
         public void rollAndUpdateResult() {
-            Log.d("ROLL", "rollAndUpdateResult called");
+            debug("ROLL", "rollAndUpdateResult called");
             seventhSeaRollForCard.roll();
             updateResult();
         }
@@ -63,7 +65,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
     @Override
     public RollCardHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.d("CardCreate", "Card created and inflating view");
+        debug("CardCreate", "Card created and inflating view");
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.seventh_sea_roll_card, parent, false);
         RollCardHolder rollCardHolder = new RollCardHolder(v);
         return rollCardHolder;
@@ -71,7 +73,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
     @Override
     public void onBindViewHolder(final RollCardHolder holder, int position) {
-        Log.d("CardCreate", "Card created and binding view");
+        debug("CardCreate", "Card created and binding view");
         // Bind the seventh sea roll
         holder.seventhSeaRollForCard = rollCards.get(position).getSeventhSeaRoll();
 
@@ -103,7 +105,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        Log.d("CardCreate", "attachedToRecyclerView called");
+        debug("CardCreate", "attachedToRecyclerView called");
         super.onAttachedToRecyclerView(recyclerView);
     }
 }

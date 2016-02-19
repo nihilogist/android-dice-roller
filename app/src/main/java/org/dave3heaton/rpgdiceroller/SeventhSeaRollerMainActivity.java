@@ -4,22 +4,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.github.brnunes.swipeablerecyclerview.SwipeableRecyclerViewTouchListener;
 
-import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaDie;
-import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaRoll;
 import org.dave3heaton.rpgdiceroller.game.seventhsea.SeventhSeaCardAdapter;
 import org.dave3heaton.rpgdiceroller.game.seventhsea.SeventhSeaRollCard;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.dave3heaton.rpgdiceroller.utils.LogUtils.debug;
 
 public class SeventhSeaRollerMainActivity extends AppCompatActivity {
 
@@ -39,7 +37,7 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seventh_sea_roller_main);
 
-        Log.d(LOG_CATEGORY, "Activity starting up: registering listeners");
+        debug(LOG_CATEGORY, "Activity starting up: registering listeners");
 
         // Initialise the listeners on the 'Roll' radiogroup
         rollGroup = (RadioGroup)findViewById(R.id.seventh_sea_roller_roll_group);
@@ -57,7 +55,7 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         keepGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                Log.d(LOG_CATEGORY, "Keep group button press: " + checkedId);
+                debug(LOG_CATEGORY, "Keep group button press: " + checkedId);
             }
         });
 
@@ -71,25 +69,25 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
         });
 
         // Initialise the card view
-        Log.d(LOG_CATEGORY, "Creating cardRecyclerView");
+        debug(LOG_CATEGORY, "Creating cardRecyclerView");
         cardRecyclerView = (RecyclerView) findViewById(R.id.seventh_sea_result_recycler_view);
-        Log.d(LOG_CATEGORY, "cardRecyclerView created, creating cardViewLayoutManager");
+        debug(LOG_CATEGORY, "cardRecyclerView created, creating cardViewLayoutManager");
         cardViewLayoutmanager = new LinearLayoutManager(this);
-        Log.d(LOG_CATEGORY, "cardViewLayoutManager created, assigning cardViewLayoutManager to it");
+        debug(LOG_CATEGORY, "cardViewLayoutManager created, assigning cardViewLayoutManager to it");
         cardRecyclerView.setLayoutManager(cardViewLayoutmanager);
-        Log.d(LOG_CATEGORY, "cardViewLayoutManager set.");
+        debug(LOG_CATEGORY, "cardViewLayoutManager set.");
 
         // Initialise the list of rolls
         rollsForCardView = new ArrayList<>();
-        Log.d(LOG_CATEGORY, "List of rolls created.");
+        debug(LOG_CATEGORY, "List of rolls created.");
 
         SeventhSeaCardAdapter cardAdapter = new SeventhSeaCardAdapter(rollsForCardView);
-        Log.d(LOG_CATEGORY, "Card Adapter created.");
+        debug(LOG_CATEGORY, "Card Adapter created.");
         cardRecyclerView.setAdapter(cardAdapter);
 
         addNewRollCardToRollCardList();
 
-        Log.d(LOG_CATEGORY, rollsForCardView.size() + " rolls in card view");
+        debug(LOG_CATEGORY, rollsForCardView.size() + " rolls in card view");
 
         // Initialise the swipe-to-dismiss code
         SwipeableRecyclerViewTouchListener swipeToDismissListener = new SwipeableRecyclerViewTouchListener(cardRecyclerView,
@@ -176,7 +174,7 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
                 button.setChecked(true);
             }
         }
-        Log.d(LOG_CATEGORY, "New keep value is " + getDiceToKeep());
+        debug(LOG_CATEGORY, "New keep value is " + getDiceToKeep());
     }
 
     private List<RadioButton> getRadioButtonListFromGroup(RadioGroup radioGroup) {
@@ -191,7 +189,7 @@ public class SeventhSeaRollerMainActivity extends AppCompatActivity {
     }
 
     private void makeRollButtonPressed() {
-        Log.d(LOG_CATEGORY, "Roll button pressed; adding new card.");
+        debug(LOG_CATEGORY, "Roll button pressed; adding new card.");
 
         addNewRollCardToRollCardList();
     }
