@@ -8,4 +8,5 @@
     <string name="seventh_sea_roller_dice_to_keep">Keeping</string>
     <string name="seventh_sea_roller_results">Results</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="seventh_sea_roll_card_reroll">Reroll</string>
 </resources>
