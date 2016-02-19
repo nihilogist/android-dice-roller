@@ -6,44 +6,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp">
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/seventh_sea_result_card_roll_detail_text"
             android:text=""
             android:id="@+id/seventh_sea_rollcard_roll_dice"
             android:layout_alignParentLeft="true"/>
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/seventh_sea_result_card_roll_detail_text"
             android:text="k"
             android:id="@+id/seventh_sea_rollcard_keep_indicator"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_dice"/>
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/seventh_sea_result_card_roll_detail_text"
             android:text=""
             android:id="@+id/seventh_sea_rollcard_keep_dice"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_keep_indicator"/>
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/seventh_sea_result_card_roll_detail_text"
             android:text=":"
             android:id="@+id/seventh_sea_rollcard_roll_end"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_keep_dice"/>
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/seventh_sea_result_card_roll_detail_text"
+            android:textStyle="bold"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text=""
             android:id="@+id/seventh_sea_rollcard_roll_score"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_end"/>
-        <TextView
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="10dp"
@@ -52,7 +53,7 @@
             android:id="@+id/seventh_sea_rollcard_roll_breakdown"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_score"
             android:layout_toLeftOf="@+id/seventh_sea_rollcard_roll_button"/>
-        <Button
+        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/seventh_sea_rollcard_roll_button"
