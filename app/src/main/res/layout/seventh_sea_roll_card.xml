@@ -44,14 +44,14 @@
             android:text=""
             android:id="@+id/seventh_sea_rollcard_roll_score"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_end"/>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_toRightOf="@+id/seventh_sea_rollcard_roll_score"
             android:layout_toLeftOf="@+id/seventh_sea_rollcard_roll_button"
             android:id="@+id/seventh_sea_rollcard_dicelist">
-        </LinearLayout>
+        </RelativeLayout>
         <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

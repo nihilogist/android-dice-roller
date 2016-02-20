@@ -7,12 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaDie;
 import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaRoll;
 import org.dave3heaton.rpgdiceroller.R;
+import org.dave3heaton.rpgdiceroller.utils.logging.LogUtils;
 
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.dave3heaton.rpgdiceroller.utils.logging.LogUtils.debug;
@@ -32,7 +36,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
         TextView keepDice;
         TextView rollResult;
         Button rollButton;
-        LinearLayout diceList;
+        RelativeLayout diceList;
         SeventhSeaRoll seventhSeaRollForCard;
 
         RollCardHolder(View cardView) {
@@ -41,7 +45,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             rollDice = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_roll_dice);
             keepDice = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_keep_dice);
             rollResult = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_roll_score);
-            diceList = (LinearLayout) cardView.findViewById(R.id.seventh_sea_rollcard_dicelist);
+            diceList = (RelativeLayout) cardView.findViewById(R.id.seventh_sea_rollcard_dicelist);
         }
 
         public void rollAndUpdateResult() {
@@ -56,19 +60,19 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             // Clear the linear layout
             diceList.removeAllViews();
 
+
             // Add new text layouts for the dice
+            TextView previousTextView = null;
             for (SeventhSeaDie die : seventhSeaRollForCard.getAllDice()) {
                 TextView dieResult = new TextView(this.itemView.getContext());
+                dieResult.setId(View.generateViewId());
                 dieResult.setText(die.getFacingNumber() + "");
 
                 // measure the textview and set the width equal to the height
-                dieResult.measure(0,0);
+                dieResult.measure(0, 0);
                 dieResult.setWidth(dieResult.getMeasuredHeight());
 
-                // Set a little bit of margin
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                params.setMargins(5,0,0,0);
-                dieResult.setLayoutParams(params);
+
 
                 // Centre the text
                 dieResult.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -80,8 +84,30 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
                     dieResult.setBackground(ContextCompat.getDrawable(this.itemView.getContext(), R.drawable.dice_result_background_lozenge_seventh_sea_discard));
                 }
 
+
+                // Set a little bit of margin
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+                params.setMargins(5, 0, 0, 0);
+//                dieResult.setLayoutParams(params);
+
+                // Try to align if possible
+                if (previousTextView != null) {
+                    LogUtils.debug("DiceList", "Aligning textLayout to right of " + previousTextView.getId());
+                    params.addRule(RelativeLayout.RIGHT_OF, previousTextView.getId());
+                    dieResult.setLayoutParams(params);
+                } else {
+                    params.addRule(RelativeLayout.ALIGN_PARENT_START);
+                    dieResult.setLayoutParams(params);
+                }
+
                 diceList.addView(dieResult);
+
+
+                // Update the previous view
+                previousTextView = dieResult;
             }
+
+
         }
     }
 
