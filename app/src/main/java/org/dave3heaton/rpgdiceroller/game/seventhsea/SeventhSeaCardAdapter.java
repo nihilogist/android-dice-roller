@@ -87,7 +87,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
                 // Set a little bit of margin
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
-                params.setMargins(5, 0, 0, 0);
+                params.setMargins(6, 2, 0, 0);
 //                dieResult.setLayoutParams(params);
 
                 // Try to align if possible
@@ -105,6 +105,58 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
                 // Update the previous view
                 previousTextView = dieResult;
+            }
+
+            reLayout();
+
+        }
+
+        private void reLayout() {
+            int totalWidth = 0;
+            int currentWidth;
+            int layoutXPadding;
+            int measuredWidth;
+            diceList.measure(0,0);
+            measuredWidth = diceList.getMeasuredWidth();
+            LogUtils.debug("Reflow layout", "Measured width of layout = " + measuredWidth);
+            layoutXPadding = diceList.getPaddingLeft() + diceList.getPaddingRight();
+            LogUtils.debug("Reflow layout", "Padding on layout = " + layoutXPadding);
+            int layoutWidthWithoutPadding = measuredWidth - layoutXPadding;
+
+            int numberOfChildViews = diceList.getChildCount();
+
+            if (numberOfChildViews > 0) {
+                TextView rootTextView = (TextView)diceList.getChildAt(0);
+                TextView rowStartView = null; // placeholder view
+                // Iterate through all child views
+                for (int i = 0; i < numberOfChildViews; i++) {
+                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)diceList.getChildAt(i).getLayoutParams();
+                    currentWidth = diceList.getChildAt(i).getMeasuredWidth();
+                    LogUtils.debug("Reflow layout", "width of child " + i + " is " + currentWidth);
+                    if (i > 0) {
+                        layoutParams.addRule(RelativeLayout.RIGHT_OF, diceList.getChildAt(i-1).getId()); // align to the right of the prev element
+                    }
+                    if (totalWidth + currentWidth > layoutWidthWithoutPadding) {
+                        LogUtils.debug("Reflow layout", "Total width (" + totalWidth + ") + current child width (" + currentWidth + ") exceeds layout width of " + layoutWidthWithoutPadding + " so wrapping here.");
+                        // If the width so far means that we chould wrap to a new line...
+                        rowStartView = rootTextView;
+                        rootTextView = (TextView)diceList.getChildAt(i);
+                        totalWidth = currentWidth;
+                        layoutParams.removeRule(RelativeLayout.RIGHT_OF);
+                    } else {
+                        LogUtils.debug("Reflow layout", "OK to place current child at end of row; incrementing total width.");
+                        totalWidth += currentWidth;
+                    }
+
+                    if (rowStartView != null) {
+                        LogUtils.debug("Reflow layout", "Dropping down one row.");
+                        layoutParams.addRule(RelativeLayout.BELOW, rowStartView.getId());
+                    } else {
+                        totalWidth += currentWidth;
+                    }
+
+                    diceList.getChildAt(i).setLayoutParams(layoutParams);
+                }
             }
 
 
