@@ -34,12 +34,23 @@
             android:layout_alignParentTop="true"
             android:id="@+id/seventh_sea_rollcard_dicelist">
         </org.apmem.tools.layouts.FlowLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="@dimen/seventh_sea_result_card_button_text_size"
+            android:id="@+id/seventh_sea_rollcard_dramadice_button"
+            android:layout_below="@+id/seventh_sea_rollcard_dicelist"
+            android:layout_toLeftOf="@+id/seventh_sea_result_card_explode_switch"
+            android:text="@string/seventh_sea_roll_card_drama_die"
+            />
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/seventh_sea_result_card_explode_switch"
             android:layout_below="@+id/seventh_sea_rollcard_dicelist"
             android:layout_toLeftOf="@+id/seventh_sea_rollcard_roll_button"
+            android:textSize="@dimen/seventh_sea_result_card_button_text_size"
             style="@style/seventh_sea_result_card_switch"
             android:text="@string/seventh_sea_roll_card_explode"/>
         <Button
@@ -48,6 +59,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:text="@string/seventh_sea_roll_card_reroll"
             android:id="@+id/seventh_sea_rollcard_roll_button"
+            android:textSize="@dimen/seventh_sea_result_card_button_text_size"
             android:layout_below="@+id/seventh_sea_rollcard_dicelist"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>

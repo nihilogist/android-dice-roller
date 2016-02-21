@@ -25,7 +25,9 @@
     <dimen name="seventh_sea_roll_result_card_padding">5dp</dimen>
     <dimen name="seventh_sea_roll_result_card_elevation">4dp</dimen>
     <dimen name="seventh_sea_roll_result_card_margin">6dp</dimen>
+    <dimen name="seventh_sea_result_card_roll_detail_text_size">12dp</dimen>
     <dimen name="seventh_sea_result_card_roll_score_text_size">35dp</dimen>
+    <dimen name="seventh_sea_result_card_button_text_size">12dp</dimen>
     <!-- Dimensions for the dice summary -->
     <dimen name="seventh_sea_roll_result_card_dice_padding">3dp</dimen>
     <dimen name="seventh_sea_roll_result_card_dice_size">16dp</dimen>

@@ -9,6 +9,7 @@
     <string name="seventh_sea_roller_results">Results</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="seventh_sea_roll_card_reroll">Reroll</string>
+    <string name="seventh_sea_roll_card_drama_die">Drama Die</string>
     <string name="seventh_sea_roll_card_explode">EXPLODE</string>
     <string name="seventh_sea_new_roll">New Roll</string>
 </resources>

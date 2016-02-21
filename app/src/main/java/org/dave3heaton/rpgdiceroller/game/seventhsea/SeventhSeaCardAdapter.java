@@ -74,9 +74,6 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
                 dieResult.measure(0, 0);
                 dieResult.setWidth(dieResult.getMeasuredHeight());
 
-                // Centre the text
-                dieResult.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-
                 if(die.isKept()) {
                     dieResult.setBackground(ContextCompat.getDrawable(this.itemView.getContext(), R.drawable.dice_result_background_lozenge_seventh_sea_keep));
                 } else {
@@ -87,6 +84,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
                 FlowLayout.LayoutParams params = new FlowLayout.LayoutParams(new FlowLayout.LayoutParams(FlowLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
                 params.setMargins(0, 4, 8, 0);
                 dieResult.setLayoutParams(params);
+                dieResult.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
                 diceList.addView(dieResult);
 

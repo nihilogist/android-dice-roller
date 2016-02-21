@@ -78,12 +78,12 @@
     </style>
 
     <style name="seventh_sea_result_card_switch">
-        <item name="android:paddingTop">15dp</item>
-        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
     </style>
 
     <style name="seventh_sea_result_card_roll_detail_text">
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">@dimen/seventh_sea_result_card_roll_detail_text_size</item>
     </style>
 
     <style name="seventh_sea_result_card_roll_score_text">
