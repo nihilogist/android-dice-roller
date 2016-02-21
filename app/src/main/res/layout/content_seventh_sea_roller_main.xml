@@ -20,7 +20,7 @@
         <TextView
             style="@style/text_header_style"
             android:textStyle="bold"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seventh_sea_roller_dice_to_roll_header"
             android:layout_alignParentStart="true"
@@ -83,7 +83,7 @@
         <TextView
             style="@style/text_header_style"
             android:textStyle="bold"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seventh_sea_roller_dice_to_keep_header"
             android:text="@string/seventh_sea_roller_dice_to_keep"/>
@@ -138,7 +138,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        style="@style/seventh_sea_layout_column_style"
+        style="@style/seventh_sea_layout_results_column_style"
         android:id="@+id/seventh_sea_roller_results_column"
         android:layout_toRightOf="@id/seventh_sea_roller_dice_to_keep_column">
 
@@ -172,7 +172,7 @@
                 android:id="@+id/seventh_sea_roller_button_roll"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:text="Roll"/>
+                android:text="@string/seventh_sea_new_roll"/>
 
         </RelativeLayout>
 

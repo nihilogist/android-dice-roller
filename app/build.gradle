@@ -11,8 +11,8 @@ android {
         applicationId "org.dave3heaton.rpgdiceroller"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 6
-        versionName "0.1-ALPHA-6"
+        versionCode 7
+        versionName "0.1-ALPHA-7"
     }
     buildTypes {
         release {

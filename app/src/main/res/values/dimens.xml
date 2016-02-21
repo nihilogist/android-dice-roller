@@ -10,12 +10,26 @@
     <dimen name="custom_radio_button_unselected_elevation">1dp</dimen>
     <dimen name="custom_radio_button_selected_elevation">4dp</dimen>
 
+    <!-- Seventh Sea Roller dimensions -->
     <dimen name="text_header_text_size">16dp</dimen>
     <dimen name="text_header_space_below">3dp</dimen>
-    <dimen name="seventh_sea_roller_dice_scrollview_width">90dp</dimen>
+
+    <!-- Seventh Sea Roller styles for the radio buttons -->
     <dimen name="seventh_sea_roller_dice_select_button_height">30dp</dimen>
+    <dimen name="seventh_sea_roller_dice_select_button_font_size">15dp</dimen>
+    <dimen name="seventh_sea_dice_select_column_width">100dp</dimen>
+
     <dimen name="seventh_sea_die_button_text_size">14dp</dimen>
+
+    <!-- Seventh Sea Roller dimensions for result cards -->
     <dimen name="seventh_sea_roll_result_card_padding">5dp</dimen>
     <dimen name="seventh_sea_roll_result_card_elevation">4dp</dimen>
     <dimen name="seventh_sea_roll_result_card_margin">6dp</dimen>
+    <dimen name="seventh_sea_result_card_roll_score_text_size">35dp</dimen>
+    <!-- Dimensions for the dice summary -->
+    <dimen name="seventh_sea_roll_result_card_dice_padding">3dp</dimen>
+    <dimen name="seventh_sea_roll_result_card_dice_size">16dp</dimen>
+    <dimen name="seventh_sea_roll_result_card_dice_text_size">8dp</dimen>
+    <dimen name="seventh_sea_roll_result_card_rounded_corner_size">15dp</dimen>
+
 </resources>

@@ -1,7 +1,6 @@
 package org.dave3heaton.rpgdiceroller.game.seventhsea;
 
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -9,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -19,13 +16,8 @@ import org.apmem.tools.layouts.FlowLayout;
 import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaDie;
 import org.dave3heaton.diceengine.game.aeg.seventhsea.SeventhSeaRoll;
 import org.dave3heaton.rpgdiceroller.R;
-import org.dave3heaton.rpgdiceroller.utils.logging.LogUtils;
 
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-
-import static org.dave3heaton.rpgdiceroller.utils.logging.LogUtils.debug;
 
 
 public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAdapter.RollCardHolder> {
@@ -75,7 +67,8 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
                 TextView dieResult = new TextView(this.itemView.getContext());
                 dieResult.setId(View.generateViewId());
                 dieResult.setText(die.getFacingNumber() + "");
-                dieResult.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
+                float dieResultSize = dieResult.getContext().getResources().getDimension(R.dimen.seventh_sea_roll_result_card_dice_text_size);
+                dieResult.setTextSize(TypedValue.COMPLEX_UNIT_DIP, dieResultSize);
 
                 // measure the textview and set the width equal to the height
                 dieResult.measure(0, 0);

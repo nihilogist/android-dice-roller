@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle" android:padding="10dp">
+    android:shape="rectangle" android:padding="@dimen/seventh_sea_roll_result_card_dice_padding">
     <solid android:color="@color/seventh_sea_dice_lozenge_keep"/>
+    <size android:height="@dimen/seventh_sea_roll_result_card_dice_size"
+        android:width="@dimen/seventh_sea_roll_result_card_dice_size"/>
     <corners
-        android:bottomRightRadius="15dp"
-        android:bottomLeftRadius="15dp"
-        android:topLeftRadius="15dp"
-        android:topRightRadius="15dp"/>
+        android:bottomRightRadius="@dimen/seventh_sea_roll_result_card_rounded_corner_size"
+        android:bottomLeftRadius="@dimen/seventh_sea_roll_result_card_rounded_corner_size"
+        android:topLeftRadius="@dimen/seventh_sea_roll_result_card_rounded_corner_size"
+        android:topRightRadius="@dimen/seventh_sea_roll_result_card_rounded_corner_size"/>
 </shape>
