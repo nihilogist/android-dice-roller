@@ -5,13 +5,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:paddingTop="10dp"
+        >
         <RelativeLayout
-            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/seventh_sea_result_card_roll_summary_pane"
-            android:paddingEnd="10dp"
-            android:paddingTop="2dp">
+            style="@style/seventh_sea_result_summary_pane">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,9 +42,8 @@
             android:id="@+id/seventh_sea_result_card_explode_switch"
             android:layout_below="@+id/seventh_sea_rollcard_dicelist"
             android:layout_toLeftOf="@+id/seventh_sea_rollcard_roll_button"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:text="EXPLODE"/>
+            style="@style/seventh_sea_result_card_switch"
+            android:text="@string/seventh_sea_roll_card_explode"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

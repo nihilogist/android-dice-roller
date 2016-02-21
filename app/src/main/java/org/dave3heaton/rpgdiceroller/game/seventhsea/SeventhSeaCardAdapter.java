@@ -3,6 +3,7 @@ package org.dave3heaton.rpgdiceroller.game.seventhsea;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,13 +55,11 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
         }
 
         public void rollAndUpdateResult() {
-            debug("ROLL", "rollAndUpdateResult called");
             seventhSeaRollForCard.roll();
             updateResult();
         }
 
         public void setRollExplosionAndUpdateResult(boolean isExploding) {
-            debug("ROLL", "setROllExplosionsAndUpdateResult called");
             seventhSeaRollForCard.setExploding(isExploding);
             updateResult();
         }
@@ -76,6 +75,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
                 TextView dieResult = new TextView(this.itemView.getContext());
                 dieResult.setId(View.generateViewId());
                 dieResult.setText(die.getFacingNumber() + "");
+                dieResult.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
 
                 // measure the textview and set the width equal to the height
                 dieResult.measure(0, 0);
@@ -105,7 +105,6 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
     @Override
     public RollCardHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        debug("CardCreate", "Card created and inflating view");
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.seventh_sea_roll_card, parent, false);
         RollCardHolder rollCardHolder = new RollCardHolder(v);
         return rollCardHolder;
@@ -113,7 +112,6 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
     @Override
     public void onBindViewHolder(final RollCardHolder holder, int position) {
-        debug("CardCreate", "Card created and binding view");
         // Bind the seventh sea roll
         holder.seventhSeaRollForCard = rollCards.get(position).getSeventhSeaRoll();
 
@@ -157,7 +155,6 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        debug("CardCreate", "attachedToRecyclerView called");
         super.onAttachedToRecyclerView(recyclerView);
     }
 }

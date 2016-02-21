@@ -17,7 +17,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:id="@+id/seventh_sea_roller_dice_to_roll_column">
-        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
+        <TextView
             style="@style/text_header_style"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -32,43 +32,43 @@
             <RadioGroup
                 style="@style/seventh_sea_die_selector_radiogroup"
                 android:id="@+id/seventh_sea_roller_roll_group">
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="1"
                     android:id="@+id/seventh_sea_roller_roll_1" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="2"
                     android:id="@+id/seventh_sea_roller_roll_2" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="3"
                     android:id="@+id/seventh_sea_roller_roll_3" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="4"
                     android:id="@+id/seventh_sea_roller_roll_4" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="5"
                     android:id="@+id/seventh_sea_roller_roll_5" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="6"
                     android:id="@+id/seventh_sea_roller_roll_6" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="7"
                     android:id="@+id/seventh_sea_roller_roll_7" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="8"
                     android:id="@+id/seventh_sea_roller_roll_8" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="9"
                     android:id="@+id/seventh_sea_roller_roll_9" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="10"
                     android:id="@+id/seventh_sea_roller_roll_10" />
@@ -80,7 +80,7 @@
         style="@style/seventh_sea_layout_column_style"
         android:id="@+id/seventh_sea_roller_dice_to_keep_column"
         android:layout_toRightOf="@+id/seventh_sea_roller_dice_to_roll_column">
-        <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceTextView
+        <TextView
             style="@style/text_header_style"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -93,43 +93,43 @@
             <RadioGroup
                 style="@style/seventh_sea_die_selector_radiogroup"
                 android:id="@+id/seventh_sea_roller_keep_group">
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="1"
                     android:id="@+id/seventh_sea_roller_keep_1" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="2"
                     android:id="@+id/seventh_sea_roller_keep_2" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="3"
                     android:id="@+id/seventh_sea_roller_keep_3" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="4"
                     android:id="@+id/seventh_sea_roller_keep_4" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="5"
                     android:id="@+id/seventh_sea_roller_keep_5" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="6"
                     android:id="@+id/seventh_sea_roller_keep_6" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="7"
                     android:id="@+id/seventh_sea_roller_keep_7" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="8"
                     android:id="@+id/seventh_sea_roller_keep_8" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="9"
                     android:id="@+id/seventh_sea_roller_keep_9" />
-                <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceRadioButton
+                <RadioButton
                     style="@style/seventhSeaDieSelectButton"
                     android:text="10"
                     android:id="@+id/seventh_sea_roller_keep_10" />
@@ -166,7 +166,7 @@
             android:id="@+id/seventh_sea_roller_control_panel"
             android:layout_alignParentBottom="true">
 
-            <org.dave3heaton.rpgdiceroller.utils.typography.JosefinTypefaceButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/seventh_sea_roller_button_roll"

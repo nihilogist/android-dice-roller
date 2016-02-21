@@ -60,12 +60,23 @@
         <item name="android:textSize">@dimen/seventh_sea_die_button_text_size</item>
     </style>
 
+    <style name="seventh_sea_result_summary_pane">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">2dp</item>
+        <item name="android:layout_width">75dp</item>
+    </style>
+
+    <style name="seventh_sea_result_card_switch">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
     <style name="seventh_sea_result_card_roll_detail_text">
         <item name="android:textSize">15dp</item>
     </style>
 
     <style name="seventh_sea_result_card_roll_score_text">
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">35dp</item>
     </style>
 
 
