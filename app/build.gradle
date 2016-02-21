@@ -9,7 +9,7 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "org.dave3heaton.rpgdiceroller"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 8
         versionName "0.1-ALPHA-8"
