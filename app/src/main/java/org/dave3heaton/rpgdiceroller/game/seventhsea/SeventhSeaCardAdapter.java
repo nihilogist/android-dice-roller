@@ -34,6 +34,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
         TextView rollResult;
         Button rollButton;
         Switch explodeSwitch;
+        Button addDramaDieButton;
         FlowLayout diceList;
         SeventhSeaRoll seventhSeaRollForCard;
 
@@ -44,6 +45,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             rollResult = (TextView) cardView.findViewById(R.id.seventh_sea_rollcard_roll_score);
             diceList = (FlowLayout) cardView.findViewById(R.id.seventh_sea_rollcard_dicelist);
             explodeSwitch = (Switch) cardView.findViewById(R.id.seventh_sea_result_card_explode_switch);
+            addDramaDieButton = (Button) cardView.findViewById(R.id.seventh_sea_rollcard_dramadice_button);
         }
 
         public void rollAndUpdateResult() {
@@ -56,13 +58,39 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             updateResult();
         }
 
+        public void addDramaDieAndUpdateResult() {
+            seventhSeaRollForCard.addDramaDice();
+            updateResult();
+        }
+
         public void updateResult() {
             rollResult.setText(Integer.toString(seventhSeaRollForCard.getFacingNumber()));
 
             // Clear the linear layout
             diceList.removeAllViews();
 
-            // Add new text layouts for the dice
+            // Add the drama dice to the layout first
+            for (SeventhSeaDie dramaDie : seventhSeaRollForCard.getDramaDice()) {
+                TextView dieResult = new TextView(this.itemView.getContext());
+                dieResult.setId(View.generateViewId());
+                dieResult.setText(dramaDie.getFacingNumber() + "");
+                float dieResultSize = dieResult.getContext().getResources().getDimension(R.dimen.seventh_sea_roll_result_card_dice_text_size);
+                dieResult.setTextSize(TypedValue.COMPLEX_UNIT_DIP, dieResultSize);
+
+                // measure the textview and set the width equal to the height
+                dieResult.measure(0, 0);
+                dieResult.setWidth(dieResult.getMeasuredHeight());
+                dieResult.setBackground(ContextCompat.getDrawable(this.itemView.getContext(), R.drawable.dice_result_background_lozenge_drama));
+
+                FlowLayout.LayoutParams params = new FlowLayout.LayoutParams(new FlowLayout.LayoutParams(FlowLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+                params.setMargins(0, 4, 8, 0);
+                dieResult.setLayoutParams(params);
+                dieResult.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+                diceList.addView(dieResult);
+            }
+
+            // Add new text layouts for the regular dice
             for (SeventhSeaDie die : seventhSeaRollForCard.getAllDice()) {
                 TextView dieResult = new TextView(this.itemView.getContext());
                 dieResult.setId(View.generateViewId());
@@ -120,7 +148,7 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             holder.updateResult();
         }
 
-        // Bind the button click listener
+        // Bind the roll button click listener
         holder.rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,6 +162,15 @@ public class SeventhSeaCardAdapter extends RecyclerView.Adapter<SeventhSeaCardAd
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 holder.setRollExplosionAndUpdateResult(isChecked);
+            }
+        });
+
+        // Bind the drama dice button click listener
+        holder.addDramaDieButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                holder.addDramaDieAndUpdateResult();
             }
         });
 

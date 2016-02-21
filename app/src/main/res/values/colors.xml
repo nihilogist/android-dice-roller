@@ -12,5 +12,6 @@
     <!-- -->
     <color name="seventh_sea_dice_lozenge_keep">#8AE3A5</color>
     <color name="seventh_sea_dice_lozenge_discard">#E0949C</color>
+    <color name="seventh_sea_dice_lozenge_drama">#92A3F0</color>
 
 </resources>
