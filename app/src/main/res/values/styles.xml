@@ -61,6 +61,10 @@
     </style>
 
     <style name="seventh_sea_result_card_roll_detail_text">
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="seventh_sea_result_card_roll_score_text">
         <item name="android:textSize">30dp</item>
     </style>
 
